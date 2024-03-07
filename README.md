@@ -8,7 +8,7 @@ Created to the YARA-L 2.0 [language specification](https://cloud.google.com/chro
 
 ## How to Use
 
-1. Download the YARA-L Extension `.vsix` file from the project's [GitHub page](https://github.com/chronicle/detection-rules/tree/main/tools).
+1. Download the YARA-L Extension `.vsix` file from the project's [GitHub page](https://github.com/chronicle/yara-l-extension).
 
 2. In the VS Code Extensions view, click the "Views and More Actions..." button.
 
