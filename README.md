@@ -4,7 +4,7 @@ Provides syntax highlighting for [YARA-L](https://cloud.google.com/chronicle/doc
 
 Created to the YARA-L 2.0 [language specification](https://cloud.google.com/chronicle/docs/detection/yara-l-2-0-syntax).
 
-![Screenshot Showing Highlights in YARA-L File](https://github.com/chronicle/detection-rules/blob/main/tools/yara-l-extension/images/example.png)
+![Screenshot Showing Highlights in YARA-L File](https://raw.githubusercontent.com/chronicle/yara-l-extension/main/images/example.png)
 
 ## How to Use
 
@@ -16,4 +16,4 @@ Created to the YARA-L 2.0 [language specification](https://cloud.google.com/chro
 
 3. Open or create a `.yaral` or `.yl2` file and start coding!
 
-![Installation Process](https://github.com/chronicle/detection-rules/blob/main/tools/yara-l-extension/images/installation.png)
+![Installation Process](https://raw.githubusercontent.com/chronicle/yara-l-extension/main/images/installation.png)
