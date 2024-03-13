@@ -1,0 +1,83 @@
+{
+  "name": "Yara-LTheme",
+  "type": "dark", // Specifies that your theme is a dark theme, which aligns with VS Code's default dark theme settings
+  "colors": {
+    "editor.background": "#161624"
+  },
+  "tokenColors": [
+    // Your custom token color modifications:
+    {
+      "scope": "variable.name.yara-l",
+      "settings": {
+        "foreground": "#C586C0"
+      }
+    },
+    {
+      "scope": "string.regexp.yara-l",
+      "settings": {
+        "foreground": "#d3772e"
+      }
+    },
+    {
+      "scope": "variable.parameter.yara-l",
+      "settings": {
+        "foreground": "#679ad1"
+      }
+    },
+    {
+      "scope": "constant.numeric.yara-l",
+      "settings": {
+       "foreground": "#b8cba9"
+      }
+    },
+    {
+      "scope": ["keyword.other.unit.yara-l", "constant.language.today.yara-l"],
+      "settings": {
+       "foreground": "#FFFFFF"
+      }
+    },
+    
+    {
+      "scope": "constant.language.yara-l",
+      "settings": {
+        "foreground": "#679ad1"
+      }
+    },
+    {
+      "scope": "entity.name.tag.yara-l",
+      "settings": {
+        "foreground": "#679ad1"
+      }
+    },
+    {
+      "scope": "keyword.control.yara-l",
+      "settings": {
+        "foreground": "#679ad1"
+      }
+    },
+    {
+      "scope": "string.quoted.double.yara-l",
+      "settings": {
+        "foreground": "#c5947c"
+      }
+    },
+    {
+      "scope": "comment.line.double-slash.yara-l",
+      "settings": {
+        "foreground": "#698a55"
+      }
+    },
+    {
+      "scope": "comment.block.yara-l",
+      "settings": {
+        "foreground": "#698a55"
+      }
+    },
+    {
+      "scope": "support.function.statistical.yara-l",
+      "settings": {
+        "foreground": "#679ad1"
+      }
+    }
+  ]
+}
