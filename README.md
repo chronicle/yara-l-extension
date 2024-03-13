@@ -4,7 +4,7 @@ Provides syntax highlighting for [YARA-L](https://cloud.google.com/chronicle/doc
 
 Created to the YARA-L 2.0 [language specification](https://cloud.google.com/chronicle/docs/detection/yara-l-2-0-syntax).
 
-![Screenshot Showing Highlights in YARA-L File](https://raw.githubusercontent.com/chronicle/yara-l-extension/main/images/example.png)
+![Screenshot Showing Highlights in YARA-L File]![Main](/images/example.png?raw=true "YARA-L Highlights")
 
 ## How to Use
 
