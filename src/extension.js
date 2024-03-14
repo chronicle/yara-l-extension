@@ -2,7 +2,7 @@ const vscode = require('vscode');
 
 function activate(context) {
     // Apply your theme settings
-    const themeId = 'Yara-LTheme';
+    const themeId = 'YARA-L Theme';
     vscode.workspace.getConfiguration().update('workbench.colorTheme', themeId, vscode.ConfigurationTarget.Workspace);
 }
 // Deactivate theme when unloading

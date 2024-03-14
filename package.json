@@ -8,7 +8,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Yara-LTheme",
+        "label": "YARA-L Theme",
         "uiTheme": "vs-dark",
         "path": "./themes/yara-l-theme-color-theme.json"
       }
@@ -29,7 +29,7 @@
       "properties": {
         "workbench.colorTheme": {
           "type": "string",
-          "default": "Yara-LTheme",
+          "default": "YARA-L Theme",
           "description": "Select the color theme for YARA-L files."
         }
       }

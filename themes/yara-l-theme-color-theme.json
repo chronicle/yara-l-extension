@@ -1,5 +1,5 @@
 {
-  "name": "Yara-LTheme",
+  "name": "YARA-L Theme",
   "type": "dark", // Specifies that your theme is a dark theme, which aligns with VS Code's default dark theme settings
   "colors": {
     "editor.background": "#161624"
@@ -33,7 +33,7 @@
     {
       "scope": ["keyword.other.unit.yara-l", "constant.language.today.yara-l"],
       "settings": {
-       "foreground": "#FFFFFF"
+       "foreground": "#b8cba9"
       }
     },
     
@@ -71,6 +71,12 @@
       "scope": "comment.block.yara-l",
       "settings": {
         "foreground": "#698a55"
+      }
+    },
+    {
+      "scope": "support.function.yara-l",
+      "settings": {
+        "foreground": "#569cd6"
       }
     },
     {
