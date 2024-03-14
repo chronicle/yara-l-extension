@@ -17,9 +17,10 @@
     { "include": "#variables" },
     { "include": "#key_value_pairs" },
     { "include": "#function_expression" },
+    { "include": "#keywords" },
+    { "include": "#statistical_functions" },
     { "include": "#function_parameter" },
     { "include": "#reference_list_expression" },
-    { "include": "#keywords" },
     { "include": "#mathematical_operators"}
   ],
   "repository": {
@@ -81,15 +82,23 @@
       "match": "[\\{\\}\\(\\)\\[\\]]"
     },
     "numbers": {
-      "match": "(\\d+\\.?\\d*)(d|h|m)?",
-      "captures": {
-        "1": {
-          "name": "constant.numeric.yara-l"
+      "patterns": [
+        {
+          "match": "(\\b\\d+)([dhm]?)\\b",
+          "captures": {
+            "1": {
+              "name": "constant.numeric.yara-l"
+            },
+            "2": {
+              "name": "keyword.other.unit.yara-l"
+            }
+          }
         },
-        "2": {
-          "name": "constant.language.yara-l"
+        {
+          "match": "\\btoday\\b",
+          "name": "constant.language.today.yara-l"
         }
-      }
+      ]
     },
     "string_constants": {
       "name": "string.quoted.double.yara-l",
@@ -136,15 +145,23 @@
       "match": "^\\s*([^($#\"\\/\\s]+)\\s*="
     },
     "function_expression": {
-      "match": "([^\\s+@=\"$(\\+\\-\\/\\*%!]+)(?<!and)\\s*\\(",
+      "match": "([^\\s+@=\"$(\\+\\-\\/\\*%!]+)\\b(?<!and)\\s*\\(",
       "captures": {
         "1": {
           "name": "support.function.yara-l"
         }
       }
     },
+    "keywords": {
+      "name": "constant.language.yara-l",
+      "match": "(?i)\\b(cidr|if|count_distinct|array_distinct|math.log|math.round|count|array|rule|meta|outcome|condition|match|re.regex|num_metric_periods|arrays.length|math.abs|net.ip_in_range_cidr|re.capture|re.replace|strings.base64_decode|strings.coalesce|strings.concat|strings.to_upper|strings.to_lower|timestamp.current_timestamp|timestamp.get_hour|timestamp.get_day_of_week|timestamp.get_week|timestamp.get_date|true|false|any|all|over|before|after|if|is|null|nocase|or|and|not|in|regex)\\b"
+    },
+    "statistical_functions": {
+    "name": "support.function.statistical.yara-l",
+    "match": "(?i)(max|min|avg|stdev|sum)"
+    },
     "function_parameter": {
-      "match": "([a-zA-Z\\.\\_]+)\\:([a-zA-Z\\.\\_]+)",
+      "match": "([a-zA-Z][\\w\\.]*)\\b\\:([a-zA-Z\\.\\_]+)",
       "captures": {
         "2": {
           "name": "variable.parameter.yara-l"
@@ -154,10 +171,6 @@
     "reference_list_expression": {
       "name": "variable.other.reference_list_expression.yara-l",
       "match": "\\B(\\%\\S*)(?<!,)"
-    },
-    "keywords": {
-      "name": "constant.language.yara-l",
-      "match": "(?i)\\b(and|or|not|in|true|false|nocase|any|all|over|before|after|if|is|null)\\b"
     },
     "mathematical_operators": {
       "name": "keyword.operator.numeric.yara-l",
